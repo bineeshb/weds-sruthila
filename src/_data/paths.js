@@ -1,8 +1,5 @@
-const libs = 'assets/libs';
-
 module.exports = {
-  libs,
-  bootstrap: `${libs}/bootstrap`,
+  images: 'assets/images',
   scripts: 'scripts',
   styles: 'styles'
 };

@@ -1,6 +1,14 @@
 const htmlmin = require('html-minifier');
 const i18n = require('eleventy-plugin-i18n');
+const pluginSass = require('eleventy-plugin-sass');
 const translations = require('./src/_data/i18n');
+
+const srcRoot = 'src';
+const srcAssets = `${srcRoot}/assets`;
+const srcScripts = `${srcRoot}/scripts`;
+const srcStyles = `${srcRoot}/styles`;
+const distRoot = 'docs';
+const distStyles = `${distRoot}/styles`;
 
 /**
  * HTML minification using html-minifier
@@ -21,9 +29,14 @@ function minifyHTML(content, outputPath) {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
-    'src/assets': '/assets',
-    'src/scripts': '/scripts',
-    'src/styles/css': '/styles'
+    [srcAssets]: '/assets',
+    [srcScripts]: '/scripts'
+  });
+
+  // Sass plugin
+  eleventyConfig.addPlugin(pluginSass, {
+    watch: `${srcStyles}/**/*.scss`,
+    outputDir: distStyles
   });
 
   // i18n plugin
@@ -42,8 +55,8 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: 'njk',
     templateFormats: ['html', 'md', 'njk'],
     dir: {
-      input: 'src/pages',
-      output: 'docs',
+      input: `${srcRoot}/pages`,
+      output: distRoot,
       data: '../_data',
       layouts: '../_layouts'
     }
