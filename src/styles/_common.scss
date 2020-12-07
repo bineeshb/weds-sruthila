@@ -8,13 +8,8 @@ html, body {
 }
 
 body {
-  position: relative;
   font-size: 16px;
   line-height: 1;
-}
-
-.page-content {
-  display: flex;
 }
 
 .page-content, .banner, .details {
@@ -23,6 +18,21 @@ body {
 }
 
 .banner, .details {
-  width: 50%;
   padding: 30px;
+}
+
+@media (max-width: $lgMaxWidth) {
+  .page-content, .banner, .details {
+    height: 100%;
+  }
+}
+
+@media (min-width: $xlMinWidth) {
+  .page-content {
+    display: flex;
+  }
+
+  .banner, .details {
+    width: 50%;
+  }
 }

@@ -13,3 +13,9 @@
     }
   }
 }
+
+@media (min-width: $mdMinWidth) and (max-width: $lgMaxWidth) {
+  .banner h1 span {
+    display: inline-block;
+  }
+}
