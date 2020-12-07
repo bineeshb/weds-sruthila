@@ -1,0 +1,28 @@
+nav {
+  position: absolute;
+  top: 0;
+  right: 20px;
+
+  a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    background-color: cornflowerblue;
+  }
+
+  a:hover {
+    color: cornflowerblue;
+    background-color: white;
+  }
+
+  a.active {
+    color: black;
+    background-color: transparent;
+  }
+
+  a + a {
+    margin-left: 5px;
+  }
+}
