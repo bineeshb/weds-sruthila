@@ -1,5 +1,5 @@
 module.exports = {
-  bride: 'Bride',
-  bridegroom: 'Bridegroom',
+  bride: 'bride',
+  groom: 'groom',
   weds: 'weds'
 };

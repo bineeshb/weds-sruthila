@@ -1,5 +1,37 @@
 {% extends "./base.njk" %}
 
 {% block baseContent %}
-  <h1>{{ 'title' | i18n }}</h1>
+  <section class="banner">
+    <h1>
+      <span class="groom">{{ 'groom' | i18n }}</span>
+      <span class="weds">{{ 'weds' | i18n }}</span>
+      <span class="bride">{{ 'bride' | i18n }}</span>
+    </h1>
+  </section>
+  <section class="details">
+    {% for event in details.events %}
+      <article>
+        <header>{{ event.type | i18n }}</header>
+        <div class="when">
+          <div class="date">
+            <span>{{ event.date }} {{ event.month | i18n }} {{ event.year }}</span>
+            <span class="day">{{ event.day | i18n }}</span>
+          </div>
+          <div class="time">
+            {% for line in event.time %}
+              {{ line | i18n }}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="venue">
+          <h4>{{ event.venue | i18n }}</h4>
+          <address>
+            {% for line in event.address %}
+              {{ line | i18n }}<br>
+            {% endfor %}
+          </address>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
 {% endblock baseContent %}
