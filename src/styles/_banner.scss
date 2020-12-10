@@ -1,21 +1,73 @@
 .banner {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  background-color: aquamarine;
+  position: relative;
 
-  h1 {
-    font-size: 5rem;
-    text-align: right;
+  .bg-img {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+  }
 
-    span {
-      display: block;
+  .title {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+
+    .bride, .groom {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .weds {
+      font-family: 'Dancing Script', cursive;
     }
   }
 }
 
-@media (min-width: $mdMinWidth) and (max-width: $lgMaxWidth) {
-  .banner h1 span {
-    display: inline-block;
+@media (min-width: $smMinWidth) {
+  .banner .title {
+    font-size: 3.25rem;
+  }
+}
+
+@media (min-width: $mdMinWidth) {
+  .banner .title {
+    font-size: 4.25rem;
+  }
+}
+
+@media (max-width: $xlMinWidth) {
+  .banner .bg-img {
+    width: 100%;
+  }
+}
+
+@media (min-width: $xlMinWidth) {
+  .banner {
+    overflow: hidden;
+
+    .title {
+      right: 30px;
+      text-align: right;
+
+      span {
+        display: block;
+      }
+    }
+
+    .bg-img {
+      position: absolute;
+    }
+
+    .img-banner2 {
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+    }
   }
 }

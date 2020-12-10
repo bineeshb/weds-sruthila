@@ -17,16 +17,6 @@ body {
   min-height: 100%;
 }
 
-.banner, .details {
-  padding: 30px;
-}
-
-@media (max-width: $lgMaxWidth) {
-  .page-content, .banner, .details {
-    height: 100%;
-  }
-}
-
 @media (min-width: $xlMinWidth) {
   .page-content {
     display: flex;

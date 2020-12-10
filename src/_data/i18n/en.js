@@ -1,5 +1,5 @@
-const bride = 'bride';
-const groom = 'groom';
+const bride = 'Sruthila';
+const groom = 'Bineesh';
 const weds = 'weds';
 
 module.exports = {
@@ -7,11 +7,11 @@ module.exports = {
   groom,
   weds,
   title: `${groom} ${weds} ${bride}`,
-  marriage: 'marriage',
-  reception: 'reception',
-  february: 'february',
-  thursday: 'thursday',
-  saturday: 'saturday',
+  marriage: 'Marriage',
+  reception: 'Reception',
+  february: 'February',
+  thursday: 'Thursday',
+  saturday: 'Saturday',
   mtime1: '9:30 am',
   mtime2: 'to',
   mtime3: '11:00 am',

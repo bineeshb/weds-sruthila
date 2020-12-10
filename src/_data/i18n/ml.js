@@ -1,6 +1,6 @@
-const bride = 'മണവാട്ടി';
-const groom = 'മണവാളൻ';
-const weds = 'വിവാഹങ്ങൾ';
+const bride = 'ശ്രുതില';
+const groom = 'ബിനീഷ്';
+const weds = '';
 
 module.exports = {
   bride,
