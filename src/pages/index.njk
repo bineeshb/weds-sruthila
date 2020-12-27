@@ -1,0 +1,51 @@
+{% extends "../_layouts/base.njk" %}
+
+{% block baseContent %}
+  <section class="page-content">
+    <section class="banner">
+      <blockquote>
+        {% for line in details.quote %}
+          <div>{{ line }}</div>
+        {% endfor %}
+      </blockquote>
+      {% for image in site.bannerImages %}
+        <picture>
+          {% for size in site.bannerSizes %}
+            <source media="(max-width: {{ size.maxWidth }}px)" srcset="{{ paths.images }}/{{ image.name }}-{{ size.imageSize }}.jpg">
+          {% endfor %}
+          <img class="bg-img {{ image.class }}" src="{{ paths.images }}/{{ image.name }}-xl.jpg" alt="{{ image.description }}">
+        </picture>
+      {% endfor %}
+      <h1 class="title">
+        <span class="groom">{{ details.groom }}</span>
+        <span class="weds">{{ details.weds }}</span>
+        <span class="bride">{{ details.bride }}</span>
+      </h1>
+    </section>
+    <section class="details">
+      {% for event in details.events %}
+        <article>
+          <header>{{ event.type }}</header>
+          <div class="when">
+            <div class="date">
+              <span>{{ event.date }} {{ event.month }} {{ event.year }}</span>
+              <span class="day">{{ event.day }}</span>
+            </div>
+            <div class="time">{{ event.time }}</div>
+          </div>
+          <div class="venue">
+            <h4>{{ event.venue }}</h4>
+            <address>
+              {% for line in event.address %}
+                {{ line }}<br>
+              {% endfor %}
+            </address>
+            <a href="{{ event.venueLocation }}" target="_blank" rel="noopener noreferrer">View Location</a>
+          </div>
+        </article>
+      {% endfor %}
+      <footer>{{ details.thank }}</footer>
+    </section>
+  </section>
+</body>
+{% endblock baseContent %}

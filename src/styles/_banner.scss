@@ -1,6 +1,21 @@
 .banner {
   position: relative;
 
+  blockquote, .title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+
+  blockquote {
+    top: 30px;
+    font-family: 'Tangerine', cursive;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px black;
+  }
+
   .bg-img {
     position: relative;
     top: 0;
@@ -10,12 +25,8 @@
   }
 
   .title {
-    position: absolute;
     bottom: 30px;
-    width: 100%;
     font-size: 3rem;
-    text-align: center;
-    color: white;
     text-shadow: 2px 2px 5px black;
 
     .bride, .groom {
@@ -29,8 +40,14 @@
 }
 
 @media (min-width: $smMinWidth) {
-  .banner .title {
-    font-size: 3.25rem;
+  .banner {
+    blockquote {
+      font-size: 3rem;
+    }
+
+    .title {
+      font-size: 3.25rem;
+    }
   }
 }
 
@@ -40,7 +57,7 @@
   }
 }
 
-@media (max-width: $xlMinWidth) {
+@media (max-width: $lgMaxWidth) {
   .banner .bg-img {
     width: 100%;
   }

@@ -1,24 +1,40 @@
 module.exports = {
+  quote: [
+    'This day for us is special',
+    'We request your presence to celebrate with us'
+  ],
+  bride: 'Sruthila',
+  groom: 'Bineesh',
+  weds: 'weds',
   events: [
     {
-      type: 'marriage',
+      type: 'Marriage',
       date: '04',
-      month: 'february',
+      month: 'February',
       year: '2021',
-      day: 'thursday',
-      time: [ 'mtime1', 'mtime2', 'mtime3' ],
-      venue: 'mVenue',
-      address: [ 'mAddressL1', 'mAddressL2']
+      day: 'Thursday',
+      time: '9:30 am to 11:00 am',
+      venue: 'Rajalakshmi Hall',
+      address: [
+        'Kavundampalayam - Edayarpalayam Road,',
+        'Edayarpalayam, Coimbatore 641 025'
+      ],
+      venueLocation: 'https://g.page/rajalakshmi-hall?share'
     },
     {
-      type: 'reception',
+      type: 'Reception',
       date: '06',
-      month: 'february',
+      month: 'February',
       year: '2021',
-      day: 'saturday',
-      time: [ 'rtime1', 'rtime2' ],
-      venue: 'rVenue',
-      address: [ 'rAddressL1', 'rAddressL2', 'rAddressL3' ]
+      day: 'Saturday',
+      time: 'from 6:00 pm',
+      venue: 'NSR Mahal (Party Hall)',
+      address: [
+        'No. 67, Redhills Road (opp. Lakeview hospital),',
+        'Kalpalayam, Chennai 600 099'
+      ],
+      venueLocation: 'https://goo.gl/maps/6ydmYnh1r6yK2tj86'
     }
-  ]
+  ],
+  thank: 'Thank you!'
 };
