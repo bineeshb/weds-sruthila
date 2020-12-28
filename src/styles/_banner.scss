@@ -1,18 +1,41 @@
+$contentSpacing: 30px;
+
+@keyframes slideUp {
+  from {
+    bottom: -100%;
+  }
+
+  to {
+    bottom: $contentSpacing;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: $contentSpacing;
+  }
+}
+
 .banner {
   position: relative;
+  overflow: hidden;
 
   blockquote, .title {
     position: absolute;
     width: 100%;
+    font-size: 2rem;
     text-align: center;
     color: white;
     z-index: 1;
   }
 
   blockquote {
-    top: 30px;
+    top: $contentSpacing;
     font-family: 'Tangerine', cursive;
-    font-size: 2.5rem;
     text-shadow: 1px 1px 3px black;
   }
 
@@ -25,8 +48,6 @@
   }
 
   .title {
-    bottom: 30px;
-    font-size: 3rem;
     text-shadow: 2px 2px 5px black;
 
     .bride, .groom {
@@ -58,18 +79,24 @@
 }
 
 @media (max-width: $lgMaxWidth) {
-  .banner .bg-img {
-    width: 100%;
+  .banner {
+    .title {
+      animation: slideUp 1s ease-out 1s forwards;
+    }
+
+    .bg-img {
+      width: 100%;
+    }
   }
 }
 
 @media (min-width: $xlMinWidth) {
   .banner {
-    overflow: hidden;
-
     .title {
-      right: 30px;
+      right: -100%;
+      bottom: $contentSpacing;
       text-align: right;
+      animation: slideRight 1s ease-out 1s forwards;
 
       span {
         display: block;
