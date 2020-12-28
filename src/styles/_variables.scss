@@ -9,3 +9,20 @@ $mdMaxWidth: 991px;
 $lgMinWidth: 992px;
 $lgMaxWidth: 1199px;
 $xlMinWidth: 1200px;
+
+$contentSpacing: 30px;
+
+//
+// Animation Delays & Durations
+//
+$delayStart: 1s;
+$delayBanner: $delayStart;
+$durationBanner: 1s;
+$delayQuote: $delayBanner + $durationBanner;
+$durationQuote: 2s;
+$delayTitle: $delayQuote + $durationQuote;
+$durationTitle: 2s;
+$durationDetails: 1s;
+$delayEvent1: $delayTitle + $durationTitle;
+$delayEvent2: $delayEvent1 + $durationDetails;
+$delayThank: $delayEvent2 + $durationDetails;

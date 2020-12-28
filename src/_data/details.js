@@ -19,7 +19,7 @@ module.exports = {
         'Kavundampalayam - Edayarpalayam Road,',
         'Edayarpalayam, Coimbatore 641 025'
       ],
-      venueLocation: 'https://g.page/rajalakshmi-hall?share'
+      venueLocation: 'https://maps.app.goo.gl/JDTMFstt2VqN2qoo7'
     },
     {
       type: 'Reception',
@@ -33,7 +33,7 @@ module.exports = {
         'No. 67, Redhills Road (opp. Lakeview hospital),',
         'Kalpalayam, Chennai 600 099'
       ],
-      venueLocation: 'https://goo.gl/maps/6ydmYnh1r6yK2tj86'
+      venueLocation: 'https://maps.app.goo.gl/Eb887pb6GMnqE1Tx8'
     }
   ],
   thank: 'Thank you!'

@@ -27,3 +27,13 @@ body {
     width: 50%;
   }
 }
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
