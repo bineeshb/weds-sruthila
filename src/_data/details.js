@@ -9,7 +9,8 @@ module.exports = {
   events: [
     {
       type: 'Marriage',
-      date: '04',
+      image: 'marriage.png',
+      date: '4',
       month: 'February',
       year: '2021',
       day: 'Thursday',
@@ -23,7 +24,8 @@ module.exports = {
     },
     {
       type: 'Reception',
-      date: '06',
+      image: 'reception.png',
+      date: '6',
       month: 'February',
       year: '2021',
       day: 'Saturday',

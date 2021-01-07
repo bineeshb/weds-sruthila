@@ -25,22 +25,25 @@
     <section class="details">
       {% for event in details.events %}
         <article>
-          <header>{{ event.type }}</header>
-          <div class="when">
-            <div class="date">
-              <span>{{ event.date }} {{ event.month }} {{ event.year }}</span>
-              <span class="day">{{ event.day }}</span>
+          <header>
+            <img src="{{ paths.images }}/{{ event.image }}" alt="">
+            <div>{{ event.type }}</div>
+          </header>
+          <div class="event-details">
+            <div class="when">
+              <div class="date">{{ event.month }} {{ event.date }}<sup>th</sup>, {{ event.year }}</div>
+              <div class="day">{{ event.day }}</div>
+              <div class="time">{{ event.time }}</div>
             </div>
-            <div class="time">{{ event.time }}</div>
-          </div>
-          <div class="venue">
-            <h4>{{ event.venue }}</h4>
-            <address>
-              {% for line in event.address %}
-                {{ line }}<br>
-              {% endfor %}
-            </address>
-            <a href="{{ event.venueLocation }}" target="_blank" rel="noopener noreferrer">View Location</a>
+            <div class="venue">
+              <h4>{{ event.venue }}</h4>
+              <address>
+                {% for line in event.address %}
+                  {{ line }}<br>
+                {% endfor %}
+              </address>
+              <a href="{{ event.venueLocation }}" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
           </div>
         </article>
       {% endfor %}
